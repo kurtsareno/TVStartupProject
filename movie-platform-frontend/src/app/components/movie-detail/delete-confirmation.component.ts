@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-delete-confirmation',
   standalone: true,
-  imports: [CommonModule, MatDialogModule, MatButtonModule], // ✅ Import required modules
+  imports: [CommonModule, MatDialogModule, MatButtonModule],
   template: `
     <h2 mat-dialog-title>Confirm Delete</h2>
     <mat-dialog-content>

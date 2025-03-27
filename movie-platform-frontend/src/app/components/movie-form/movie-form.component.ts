@@ -43,7 +43,7 @@ export class MovieFormComponent implements OnInit {
 
   async ngOnInit() {
     this.movieId = this.route.snapshot.params['id'];
-    this.isEditMode = !!this.movieId; // If ID exists, we're in edit mode
+    this.isEditMode = !!this.movieId;
 
     if (this.isEditMode) {
       try {

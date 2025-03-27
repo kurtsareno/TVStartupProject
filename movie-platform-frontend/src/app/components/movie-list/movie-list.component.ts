@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-movie-list',
   standalone: true,
-  imports: [CommonModule, RouterModule, HttpClientModule], // Add HttpClientModule here
+  imports: [CommonModule, RouterModule, HttpClientModule],
   templateUrl: './movie-list.component.html',
   styleUrls: ['./movie-list.component.css']
 })

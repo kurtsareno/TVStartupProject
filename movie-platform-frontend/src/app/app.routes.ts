@@ -8,5 +8,5 @@ export const routes: Routes = [
   { path: 'movie/:id', component: MovieDetailComponent },
   { path: 'add-movie', component: MovieFormComponent },
   { path: 'edit-movie/:id', component: MovieFormComponent },
-  { path: '**', redirectTo: '', pathMatch: 'full' } // Redirect invalid paths to home
+  { path: '**', redirectTo: '', pathMatch: 'full' } 
 ];

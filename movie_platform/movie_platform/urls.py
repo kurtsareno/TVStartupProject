@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('', include('movies.urls')),  # Include your app's URLs
+    path('', include('movies.urls')),
 ]
 
 if settings.DEBUG:

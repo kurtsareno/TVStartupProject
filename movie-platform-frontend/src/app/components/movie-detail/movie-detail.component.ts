@@ -47,7 +47,7 @@ export class MovieDetailComponent implements OnInit {
         try {
           await this.movieService.deleteMovie(this.movie.id);
           alert('Movie deleted successfully!');
-          this.router.navigate(['/']); // ✅ Redirect after deletion
+          this.router.navigate(['/']);
         } catch (error) {
           console.error('Error deleting movie:', error);
           alert('Failed to delete movie.');

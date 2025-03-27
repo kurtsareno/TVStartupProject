@@ -11,7 +11,7 @@ class MovieViewSet(viewsets.ModelViewSet):
 
     def create(self, request, *args, **kwargs):
         """ Custom create method to debug file upload issues """
-        print("Received request data:", request.data)  # Debugging
+        print("Received request data:", request.data)
 
         serializer = self.get_serializer(data=request.data)
 
@@ -20,8 +20,8 @@ class MovieViewSet(viewsets.ModelViewSet):
                 serializer.save()
                 return Response(serializer.data, status=status.HTTP_201_CREATED)
             except Exception as e:
-                print("Error saving movie:", str(e))  # Print error in Django console
+                print("Error saving movie:", str(e))
                 return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         else:
-            print("Validation Errors:", serializer.errors)  # Debugging
+            print("Validation Errors:", serializer.errors)
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
