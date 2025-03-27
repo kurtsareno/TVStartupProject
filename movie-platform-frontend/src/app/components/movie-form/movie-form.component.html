@@ -1,0 +1,36 @@
+<div class="form-wrapper">
+    <mat-card class="movie-form-container">
+      <h1 class="form-title">
+        <mat-icon>movie</mat-icon> Add a New Movie
+      </h1>
+      <form [formGroup]="movieForm" (ngSubmit)="submitMovie()">
+        
+        <mat-form-field class="full-width">
+          <mat-label>Movie Title</mat-label>
+          <input matInput formControlName="title" required />
+        </mat-form-field>
+    
+        <mat-form-field class="full-width">
+          <mat-label>Description</mat-label>
+          <textarea matInput formControlName="description" rows="3" required></textarea>
+        </mat-form-field>
+    
+        <div class="file-upload">
+          <label class="file-label">
+            <input type="file" (change)="onFileChange($event)" required hidden />
+            <mat-icon>upload</mat-icon> Choose File
+          </label>
+          <span class="file-name">{{ selectedFileName }}</span>
+        </div>
+    
+        <div class="button-container">
+          <button mat-raised-button color="primary" type="submit" [disabled]="movieForm.invalid">
+            <mat-icon>save</mat-icon> Save Movie
+          </button>
+          <button mat-raised-button color="warn" type="button" (click)="cancel()">
+            <mat-icon>cancel</mat-icon> Cancel
+          </button>
+        </div>
+      </form>
+    </mat-card>
+  </div>

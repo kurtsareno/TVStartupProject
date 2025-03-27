@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" class="toolbar">
+  <div class="logo">
+    <span class="title">🎬Movie Platform</span>
+  </div>
+
+  <span class="spacer"></span>
+
+  <button mat-raised-button color="black" routerLink="/" routerLinkActive="active">
+    <mat-icon>home</mat-icon> Home
+  </button>
+
+  <button mat-raised-button color="black" routerLink="/add-movie" routerLinkActive="active">
+    <mat-icon>add</mat-icon> Add Movie
+  </button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

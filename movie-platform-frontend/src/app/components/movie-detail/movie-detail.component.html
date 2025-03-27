@@ -1,0 +1,28 @@
+<div class="movie-container">
+    <mat-card class="movie-card">
+      <mat-card-header>
+        <mat-card-title>{{ movie.title }}</mat-card-title>
+      </mat-card-header>
+  
+      <mat-card-content>
+        <div class="video-wrapper">
+          <video controls [attr.src]="movie.video_file"></video>
+        </div>
+        <p class="movie-description">{{ movie.description }}</p>
+      </mat-card-content>
+  
+      <mat-card-actions align="start">
+        <button mat-raised-button color="primary" routerLink="/" class="back-button">
+          <mat-icon>arrow_back</mat-icon> Back to Movies
+        </button>
+        
+        <button mat-raised-button color="accent" [routerLink]="['/edit-movie', movie.id]" class="update-button">
+        <mat-icon>edit</mat-icon> Update
+        </button>
+
+        <button mat-raised-button color="warn" (click)="deleteMovie()" class="delete-button">
+        <mat-icon>delete</mat-icon> Delete
+        </button>
+    </mat-card-actions>
+    </mat-card>
+  </div>

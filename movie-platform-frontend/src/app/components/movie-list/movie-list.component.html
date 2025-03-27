@@ -1,0 +1,10 @@
+<div class="movie-list-container">
+    <h2>🎥 Available Movies</h2>
+    <div class="movies">
+      <div *ngFor="let movie of movies" class="movie-card">
+        <h3>{{ movie.title }}</h3>
+        <p>{{ movie.description }}</p>
+        <button [routerLink]="['/movie', movie.id]" mat-raised-button color="primary">View Details</button>
+      </div>
+    </div>
+  </div>
